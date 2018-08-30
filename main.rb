@@ -28,7 +28,7 @@ Telegram::Bot::Client.run(telegram_bot_api_key) do |bot|
 
       items = wardrobe.random_suitable_items(temperature)
 
-      items_text = "Предлагая сегодня надеть:\n\n"
+      items_text = "Предлагаю тебе сегодня надеть это:\n\n"
       items_text += items.map { |item| item.info }.join("\n")
 
       bot.api.send_message(chat_id: message.chat.id, text: temperature_text)
