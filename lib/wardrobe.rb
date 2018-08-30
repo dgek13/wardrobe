@@ -25,6 +25,7 @@ class Wardrobe
     end
   end
 
+  # 1. Все типы вещей
   def types
     types = @clothes_items.map do |clothes_item|
       clothes_item.type
@@ -33,7 +34,17 @@ class Wardrobe
     return types.uniq
   end
 
-def random_suitable_items(temperature)
+  # 2. Все вещи указанного типа
+  # def clothes_items_by_type(type)
+  #   items = @clothes_items.select do |clothes_item|
+  #     clothes_item.type == type
+  #   end
+
+  #   return items
+  # end
+
+  # 3. По 1 вещи случайной каждого типа, подходящей под заданную температуру
+  def random_suitable_items(temperature)
     items = []
 
     types.each do |type|

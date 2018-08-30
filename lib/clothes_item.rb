@@ -13,4 +13,8 @@ class ClothesItem
   def info
     "#{@title} (#{@type}, от #{@min_temp} до #{@max_temp})"
   end
+
+  def type
+    @type
+  end
 end

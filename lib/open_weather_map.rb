@@ -1,4 +1,4 @@
-def open_weather_current_temperature
+def open_weather_current_temperature(api_key, city)
   base_url = "https://api.openweathermap.org/data/2.5/weather"
 
   units = "metric"
