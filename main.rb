@@ -12,7 +12,7 @@ city = "Moscow"
 telegram_bot_api_key =
   "650565763:AAHX_0_8l3TFgfRr1UnoOOFTKOPlVEb3ekE"
 
-Telegram::Bot::Client.run(token) do |bot|
+Telegram::Bot::Client.run(telegram_bot_api_key) do |bot|
   bot.listen do |message|
     case message.text
     when '/start'
