@@ -10,7 +10,7 @@ api_key = "e809fbd81e2a508842b45ad0a5c8bbc9"
 spreadsheet_key = "1bPT458nCSWahOXu6FcRmv3ASWC1Yl0UuyiTlTRCBUAI"
 city = "Moscow"
 telegram_bot_api_key =
-  "650565763:AAHX_0_8l3TFgfRr1UnoOOFTKOPlVEb3ekE"
+  "635203088:AAGO0ScwfLi2jETzIJ9vsFPbbSN8qm3xSkg"
 
 Telegram::Bot::Client.run(telegram_bot_api_key) do |bot|
   bot.listen do |message|
