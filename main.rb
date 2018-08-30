@@ -7,8 +7,8 @@ require_relative "lib/wardrobe"
 require_relative "lib/open_weather_map"
 
 api_key = "e809fbd81e2a508842b45ad0a5c8bbc9"
-spreadsheet_key = "1bPT458nCSWahOXu6FcRmv3ASWC1Yl0UuyiTlTRCBUAI"
 city = "Moscow"
+spreadsheet_key = "1bPT458nCSWahOXu6FcRmv3ASWC1Yl0UuyiTlTRCBUAI"
 telegram_bot_api_key =
   "635203088:AAGO0ScwfLi2jETzIJ9vsFPbbSN8qm3xSkg"
 
@@ -20,7 +20,7 @@ Telegram::Bot::Client.run(telegram_bot_api_key) do |bot|
     when '/stop'
       bot.api.send_message(chat_id: message.chat.id, text: "Пока, #{message.from.first_name}!")
     else
-      temperature = open_weather_current_temperature
+      temperature = open_weather_current_temperature(api_key, city)
 
       temperature_text = "По данным openweathermap.org в Москве сейчас #{temperature}°C"
 
