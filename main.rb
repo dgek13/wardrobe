@@ -1,6 +1,7 @@
 require "json"
 require "net/http"
 require "telegram/bot"
+require "dotenv"
 
 require_relative "lib/clothes_item"
 require_relative "lib/wardrobe"
